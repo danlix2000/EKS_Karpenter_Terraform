@@ -1,0 +1,5 @@
+resource "aws_key_pair" "ssh_key" {
+  key_name   = "eks_ssh_name"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC5fWrS0gF9OmrUBCBYn3Zsg2fhDevh/J0DqwnH+Sk/HeXAPUvmO3rBROmyFD3peiCDxncKqZs/pVhLD9q4xZv6ccnDYZlidQ2XJ/xB5LC+G5WSRkAc6iIuu6D5uuDNpbMLGtZWeADWTEoM6krajwI+UdHos5sjdCb7qJrLLZMQebyqjH1NDanxAB4Rk6vZrgbU4AnudKYYe3U9L2YO9m7kEwb+vLSOxj07d9QBq+9/rjA9MgYnaKG2WF2tr2q3B3UpFd+HE1bXtI2HODuE8pDdFzta8C6z/P21bpNRkgrd/StaYwsmirqxQlbEqmxP1v5wIM0c5e1rRz82AQxO9HBF ddanskey"
+}
+

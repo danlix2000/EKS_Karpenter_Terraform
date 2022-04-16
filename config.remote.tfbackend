@@ -1,0 +1,3 @@
+workspaces { name = "xen-terra" }
+hostname     = "app.terraform.io"
+organization = "danlix-env"

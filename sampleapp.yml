@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: karp-test-deployment
+  labels:
+    app: karp-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: karp-nginx
+  template:
+    metadata:
+      labels:
+        app: karp-nginx
+    spec:
+      containers:
+      - name: karp-nginx
+        image: nginx:stable-alpine
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            cpu: "500m"       
+            memory: "500Mi"            
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: karp-test-service-nginx
+  labels:
+    app: karp-nginx
+spec:
+  type: NodePort
+  selector:
+    app: karp-nginx
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 31450
+   
